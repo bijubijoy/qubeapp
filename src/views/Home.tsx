@@ -14,6 +14,7 @@ import {
 	Container
 } from 'reactstrap';
 import classnames from 'classnames';
+import GitHub from 'github-api';
 
 interface Props {}
 interface State {
@@ -37,9 +38,22 @@ export default class Home extends React.Component<Props, State> {
 			});
 		}
 	}
+
+	componentDidMount() {
+		// basic auth
+		var gh = new GitHub({
+			username: 'bijubijoy',
+			password: 'ispellopen123'
+		});
+		var me = gh.getUser();
+		me.listNotification(function(err, notifcations) {
+			console.log(notifcations);
+		});
+	}
 	render() {
 		return (
 			<Container className="home-container">
+				<div className="heading">Github Projects</div>
 				<Nav tabs>
 					<NavItem>
 						<NavLink

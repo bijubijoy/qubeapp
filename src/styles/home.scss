@@ -1,2 +1,11 @@
 .home-container {
+	font-size: 20px;
+	.heading {
+		font-size: 2rem;
+		margin-top: 15px;
+		margin-bottom: 15px;
+	}
+	li.nav-item {
+		cursor: pointer;
+	}
 }

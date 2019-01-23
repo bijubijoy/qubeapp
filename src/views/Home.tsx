@@ -16,7 +16,7 @@ import {
 import classnames from 'classnames';
 import GitHub from 'github-api';
 
-interface Props {}
+interface Props { }
 interface State {
 	activeTab: string;
 }
@@ -45,9 +45,14 @@ export default class Home extends React.Component<Props, State> {
 			username: 'bijubijoy',
 			password: 'ispellopen123'
 		});
-		var me = gh.getUser();
-		me.listNotification(function(err, notifcations) {
-			console.log(notifcations);
+		var clayreimann = gh.getUser('bijubijoy');
+		// clayreimann.getProfile(function (err, repos) {
+		// 	// look at all the starred repos!
+		// 	// console.log(repos);
+		// });
+		var search = gh.search();
+		search.forRepositories("javascript", function (err, repos) {
+			console.log(repos);
 		});
 	}
 	render() {

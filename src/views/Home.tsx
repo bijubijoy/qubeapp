@@ -40,20 +40,7 @@ export default class Home extends React.Component<Props, State> {
 	}
 
 	componentDidMount() {
-		// basic auth
-		var gh = new GitHub({
-			username: 'bijubijoy',
-			password: 'ispellopen123'
-		});
-		var clayreimann = gh.getUser('bijubijoy');
-		// clayreimann.getProfile(function (err, repos) {
-		// 	// look at all the starred repos!
-		// 	// console.log(repos);
-		// });
-		var search = gh.search();
-		search.forRepositories("javascript", function (err, repos) {
-			console.log(repos);
-		});
+
 	}
 	render() {
 		return (

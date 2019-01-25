@@ -1,0 +1,16 @@
+.trending-container{
+    margin-top:25px;
+    .search-container{
+        margin-bottom:25px;
+    }
+    .pagination{
+        padding-top:10px;
+        padding-bottom:10px;
+        display: flex;
+        align-self: center;
+        justify-content:center;
+    }
+}
+.modal-content{
+    border:0 !important;
+}

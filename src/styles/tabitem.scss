@@ -1,0 +1,35 @@
+.tab-item{
+    &:hover{
+        background: #F5F5F5;
+    }
+    cursor: pointer;
+    a{text-decoration: none !important;}
+    .repo-image{
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100px;
+    }
+    .text-details{
+        min-height:100px;
+        color:#AAAAAA;
+        font-size: 1.2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .name{
+            color: black;
+            font-weight: 600;
+        }
+        .details{
+            margin-top:8px;
+            font-size: 1rem;
+            span{
+                margin-right: 5px;
+                svg{
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}
